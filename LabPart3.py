@@ -34,6 +34,7 @@ def third_task(string):
     print(new_array)
 
     new_array.sort(key=lambda x:(len(x),x))
+    #отсортировать сначала по увеличению длины слова, а затем лексикографически
 
     print(new_array)
     #print(some_funny_array)
