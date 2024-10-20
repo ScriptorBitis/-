@@ -24,14 +24,18 @@ def third_task(string):
 
     while [] in some_funny_array:
         some_funny_array.remove([])
+    print(some_funny_array)
 
     #получили значение-надо выводить
     new_array = []
     for i in some_funny_array:
         for j in i:
             new_array.append(j)
+    print(new_array)
 
-    new_array.sort(key=len)
+    new_array.sort(key=lambda x:(len(x),x))
+
+    print(new_array)
     #print(some_funny_array)
     #print(new_array)
 
@@ -39,10 +43,7 @@ def third_task(string):
         print(i)
 
 test_three = ["Классное слово – обороноспособность, которое должно идти после слов: трава и молоко.",
-              "Я чай люблю и чайник знаю",
-              "Вот бы сходить на лекцию Клименкова Сергея Викторовича...",
-              "Мы идем по дороге.Вече. Ярило. Город.О! Ночь.День.Улица.Фонарь.Аптека.Мышь.",
-              "Латынь из моды вышла ныне: Так, если правду вам сказать,Он знал довольно по-латыне,Чтоб эпиграфы разбирать"]
+              ]
 
 for test3 in test_three:
     third_task(test3)
