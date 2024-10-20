@@ -1,5 +1,9 @@
 import re
-
+print('''Задание:
+Программа должна считать число смайликов определённого вида (вид смайлика описан в таблице
+вариантов) в предложенном тексте.
+[глаза][нос][рот].
+''')
 print('Вариант лабораторной работы для выполнения первого задания:', 467969 % 6, 467969 % 4, 467969 % 8)
 print('Смайлик: [<) \n ')
 cnt = 0
@@ -58,9 +62,12 @@ print("\nЗадание 3")
 
 print('\nВариант лабораторной работы для выполнения третьего задания:', 467969 % 8 )
 
-
+cnt=0
 def third_task(string):
+    global cnt
+    cnt+=1
     print(f'Тест номер {cnt} \n {string} \n Ответ:')
+
 
     string=string.lower()
     letters = 'аеиоуыэюя'
@@ -79,7 +86,10 @@ def third_task(string):
         for j in i:
             new_array.append(j)
 
-    new_array.sort(key=len)
+
+    new_array.sort(key=lambda x:(len(x),x))
+
+
     #print(some_funny_array)
     #print(new_array)
 
